@@ -13,8 +13,8 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 # --- CONFIGURATION ---
-DEEPSEEK_API_KEY = os.getenv("sk-60b3c998b7bc4a1e9de1175de78c3e75")
-client = OpenAI(api_key="sk-60b3c998b7bc4a1e9de1175de78c3e75")
+DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY")
+client = OpenAI(api_key=DEEPSEEK_API_KEY)
 
 app = FastAPI()
 app.add_middleware(
